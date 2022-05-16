@@ -3,7 +3,7 @@
 * Copyright © PH2M SARL. All rights reserved.
 * See COPYING.txt for license details.
 */
-namespace PH2MCommonApi\Model\Swagger;
+namespace PH2M\CommonApi\Model\Swagger;
 
 use Magento\Framework\App\State;
 
