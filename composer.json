@@ -1,0 +1,26 @@
+{
+  "name": "ph2m/common-api",
+  "description": "PH2M Common Api override",
+  "homepage": "https://github.com/PH2M/PH2MApi",
+  "require": {
+    "magento/product-community-edition": ">=2.3.7"
+  },
+  "type": "magento2-module",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "PH2M",
+      "email": "contact@ph2m.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "PH2M\\CommonApi\\": ""
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+}

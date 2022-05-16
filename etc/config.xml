@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+* Copyright © PH2M SARL. All rights reserved.
+* See COPYING.txt for license details.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <webapi>
+            <ph2m_api>
+                <enable_swagger>1</enable_swagger>
+            </ph2m_api>
+            <validation>
+                <input_limit_enabled>0</input_limit_enabled>
+                <default_page_size>1000</default_page_size>
+            </validation>
+        </webapi>
+        <graphql>
+            <validation>
+                <input_limit_enabled>0</input_limit_enabled>
+            </validation>
+        </graphql>
+    </default>
+</config>
