@@ -6,15 +6,23 @@
 namespace PH2M\CommonApi\Model\Swagger;
 
 use Magento\Framework\App\State;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 
 class Config extends \Magento\Swagger\Model\Config
 {
+    public const ENABLE_SWAGGER_XML_PATH = "webapi/ph2m_api/enable_swagger";
+    protected ScopeConfigInterface $scopeConfig;
+
     /**
      * @param State $state
-     * @param bool $enabledInProduction
+     * @param ScopeConfigInterface $scopeConfig
      */
-    public function __construct(State $state, bool $enabledInProduction = true)
+    public function __construct(State $state, ScopeConfigInterface $scopeConfig)
     {
-        parent::__construct($state, $enabledInProduction);
+        $this->scopeConfig = $scopeConfig;
+
+        parent::__construct($state, (bool)$this->scopeConfig->getValue(
+            self::ENABLE_SWAGGER_XML_PATH
+        ));
     }
 }
