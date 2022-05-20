@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace PH2M\CommonApi\Controller\Index;
+namespace PH2M\EnhancedApi\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -18,7 +18,7 @@ use Magento\Framework\View\Page\Config as PageConfig;
 use Magento\Framework\View\Result\PageFactory as PageFactory;
 use Magento\Swagger\Model\Config;
 use Magento\Customer\Model\Session;
-use PH2M\CommonApi\Model\Swagger\IsAllowed;
+use PH2M\EnhancedApi\Model\Swagger\IsAllowed;
 
 class Swagger extends Action implements HttpGetActionInterface
 {
