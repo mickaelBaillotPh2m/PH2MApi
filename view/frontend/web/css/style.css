@@ -1,0 +1,57 @@
+* {box-sizing: border-box}
+
+html,
+body {
+    font-size: 14px;
+}
+
+.swagger-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.swagger-form .admin__field-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    display: block;
+    margin-top: 1rem;
+}
+
+.swagger-form form {
+    background: #dfdfde;
+    min-width: 30rem;
+    padding: 3rem;
+    box-shadow: 0 0 13px #aaa;
+}
+
+.swagger-form fieldset {
+    border: 0;
+}
+
+.swagger-form form input {
+    width: 100%;
+    padding: 0.3rem 1rem;
+    border: 0;
+    height: 50px;
+}
+
+.swagger-form form .form-actions input {
+    background: #111;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem;
+    transition: all 300ms;
+}
+
+.swagger-form form .form-actions input:hover {
+    background: #fff;
+    color: #111;
+}

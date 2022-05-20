@@ -1,0 +1,46 @@
+<div class="swagger-form">
+    <form method="post" action="" id="login-form" data-mage-init='{"form": {}, "validation": {}}' autocomplete="off">
+        <h1><?= $block->escapeHtmlAttr(__('Swagger login')) ?></h1>
+        <fieldset class="admin__fieldset">
+            <input name="form_key" type="hidden" value="<?= $block->escapeHtmlAttr($block->getFormKey()) ?>" />
+            <div class="admin__field _required field-username">
+                <label for="login" class="admin__field-label">
+                    <span><?= $block->escapeHtml(__('Username')) ?></span>
+                </label>
+                <div class="admin__field-control">
+                    <input id="login"
+                           class="admin__control-text"
+                           type="text"
+                           name="login"
+                           autofocus
+                           value=""
+                           data-validate="{required:true}"
+                           placeholder="<?= $block->escapeHtmlAttr(__('user name')) ?>"
+                           autocomplete="off"
+                    />
+                </div>
+            </div>
+            <div class="admin__field _required field-password">
+                <label for="password" class="admin__field-label">
+                    <span><?= $block->escapeHtml(__('Password')) ?></span>
+                </label>
+                <div class="admin__field-control">
+                    <input id="password"
+                           class="admin__control-text"
+                           type="password"
+                           name="password"
+                           data-validate="{required:true}"
+                           value=""
+                           placeholder="<?= $block->escapeHtmlAttr(__('password')) ?>"
+                           autocomplete="off"
+                    />
+                </div>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="submit" />
+            </div>
+        </fieldset>
+    </form>
+    <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
+    <?= $block->getChildHtml('messages'); ?>
+</div>

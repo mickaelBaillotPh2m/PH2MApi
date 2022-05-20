@@ -1,7 +1,7 @@
 {
-  "name": "ph2m/common-api",
-  "description": "PH2M Common Api override",
-  "homepage": "https://github.com/PH2M/PH2MApi",
+  "name": "ph2m/magento2-module-enhanced-api",
+  "description": "Magento 2 Api enhancer",
+  "homepage": "https://github.com/PH2M/magento2-module-enhanced-api",
   "require": {
     "magento/product-community-edition": ">=2.3.7"
   },
@@ -18,7 +18,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "PH2M\\CommonApi\\": ""
+      "PH2M\\EnhancedApi\\": ""
     }
   },
   "minimum-stability": "dev",

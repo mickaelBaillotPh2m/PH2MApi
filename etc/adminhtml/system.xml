@@ -1,29 +1,25 @@
 <?xml version="1.0"?>
-<!--
-/**
- * 2011-2017 PH2M
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0) that is available
- * through the world-wide-web at this URL: http://www.opensource.org/licenses/OSL-3.0
- * If you are unable to obtain it through the world-wide-web, please send an email
- * to contact@ph2m.com so we can send you a copy immediately.
- *
- * @author PH2M - contact@ph2m.com
- * @copyright 2001-2017 PH2M
- * @license http://www.opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
- */
- -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="webapi" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
-            <group id="ph2m_api" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>PH2M Api</label>
+            <group id="swagger" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Swagger</label>
                 <field id="enable_swagger" translate="label comment" type="select" sortOrder="20" showInDefault="1" canRestore="1">
                     <label>Enable Swagger</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Enable swagger controller (Do not forget to protect swagger url in production or set this config to no).</comment>
+                </field>
+                <field id="swagger_login" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swagger login</label>
+                    <depends>
+                        <field id="webapi/swagger/enable_swagger">1</field>
+                    </depends>
+                </field>
+                <field id="swagger_password" translate="label" type="password" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Swagger password</label>
+                    <depends>
+                        <field id="webapi/swagger/enable_swagger">1</field>
+                    </depends>
                 </field>
             </group>
         </section>

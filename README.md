@@ -1,6 +1,6 @@
-PH2M_CommonApi
+Enhanced_Api
 -------
-PH2M Common api override.
+Api enhancer.
 
 Requirements
 ------------
@@ -9,7 +9,7 @@ Magento >= 2.3.7
 Installation
 ------------
 ```
-composer require ph2m/common-api
-bin/magento module:enable PH2M_CommonApi
+composer require ph2m/magento2-module-enhanced-api
+bin/magento module:enable Enhanced_Api
 bin/magento setup:upgrade
 ```

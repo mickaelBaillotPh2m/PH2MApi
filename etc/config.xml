@@ -9,7 +9,7 @@
     <default>
         <webapi>
             <ph2m_api>
-                <enable_swagger>1</enable_swagger>
+                <swagger>1</swagger>
             </ph2m_api>
             <validation>
                 <input_limit_enabled>0</input_limit_enabled>
