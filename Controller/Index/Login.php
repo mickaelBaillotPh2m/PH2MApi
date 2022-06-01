@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace PH2M\EnhancedApi\Controller\Index;
+namespace Enhanced\Api\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -24,7 +24,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Message\ManagerInterface as MessageManagerInterface;
 use Magento\Customer\Model\Session;
-use PH2M\EnhancedApi\Model\Swagger\IsAllowed;
+use Enhanced\Api\Model\Swagger\IsAllowed;
 
 class Login extends Action implements HttpGetActionInterface, HttpPostActionInterface, CsrfAwareActionInterface
 {
@@ -81,7 +81,7 @@ class Login extends Action implements HttpGetActionInterface, HttpPostActionInte
         $post = $this->getRequest()->getPostValue();
 
         if (isset($post['login']) && isset($post['password'])) {
-            if ($this->isAllowed->checkCredentials($post['login'], $post['password'])) {
+            if (!$this->isAllowed->checkCredentials($post['login'], $post['password'])) {
                 $this->pageConfig->addBodyClass('swagger-section');
                 $this->messageManager->addErrorMessage(__('Bad credentials'));
                 return $this->pageFactory->create();

@@ -18,9 +18,9 @@
       "registration.php"
     ],
     "psr-4": {
-      "PH2M\\EnhancedApi\\": ""
+      "Enhanced\\Api\\": ""
     }
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true
 }

@@ -26,7 +26,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="root">
-            <block name="swaggerUiContent" class="Magento\Swagger\Block\Index" template="Enhanced_Api::swagger-ui/index.phtml">
+            <block name="swaggerUiContent" class="Magento\Swagger\Block\Index" template="Enhanced_Api::swagger-ui/login.phtml">
                 <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
             </block>
         </referenceContainer>

@@ -7,7 +7,7 @@
                 <field id="enable_swagger" translate="label comment" type="select" sortOrder="20" showInDefault="1" canRestore="1">
                     <label>Enable Swagger</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Enable swagger controller (Do not forget to protect swagger url in production or set this config to no).</comment>
+                    <comment>Enable swagger controller</comment>
                 </field>
                 <field id="swagger_login" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Swagger login</label>
