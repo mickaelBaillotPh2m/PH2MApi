@@ -33,7 +33,12 @@ class IsAllowed extends \Magento\Swagger\Model\Config
 
     public function isAllowedToAccessSwagger(): ?bool
     {
-        return $this->customerSession->getSwaggerAuthorized();
+        if ($this->scopeConfig->getValue('webapi/swagger/swagger_login')
+           && $this->scopeConfig->getValue('webapi/swagger/swagger_password')) {
+           return $this->customerSession->getSwaggerAuthorized();
+        }
+
+        return true;
     }
 
     public function checkCredentials(string $login, string $password): bool

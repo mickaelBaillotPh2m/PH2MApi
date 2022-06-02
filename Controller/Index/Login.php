@@ -1,8 +1,5 @@
 <?php
-/***
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 declare(strict_types=1);
 
 namespace Enhanced\Api\Controller\Index;
@@ -89,6 +86,13 @@ class Login extends Action implements HttpGetActionInterface, HttpPostActionInte
 
             $this->customerSession->setSwaggerAuthorized(true);
 
+            $redirect = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_REDIRECT);
+            $redirect->setUrl('/swagger/index');
+
+            return $redirect;
+        }
+
+        if ($this->isAllowed->isAllowedToAccessSwagger()) {
             $redirect = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_REDIRECT);
             $redirect->setUrl('/swagger/index');
 
