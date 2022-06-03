@@ -1,4 +1,4 @@
-Enhanced_Api
+Ph2m_EnhancedApi
 -------
 Api enhancer.
 
@@ -10,6 +10,6 @@ Installation
 ------------
 ```
 composer require ph2m/magento2-module-enhanced-api
-bin/magento module:enable Enhanced_Api
+bin/magento module:enable Ph2m_EnhancedApi
 bin/magento setup:upgrade
 ```

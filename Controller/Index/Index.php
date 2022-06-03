@@ -1,8 +1,11 @@
 <?php
-
+/***
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 declare(strict_types=1);
 
-namespace Enhanced\Api\Controller\Index;
+namespace Ph2m\EnhancedApi\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -15,7 +18,7 @@ use Magento\Framework\View\Page\Config as PageConfig;
 use Magento\Framework\View\Result\PageFactory as PageFactory;
 use Magento\Swagger\Model\Config;
 use Magento\Customer\Model\Session;
-use Enhanced\Api\Model\Swagger\IsAllowed;
+use Ph2m\EnhancedApi\Model\Swagger\IsAllowed;
 
 class Index extends Action implements HttpGetActionInterface
 {

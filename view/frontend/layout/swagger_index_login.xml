@@ -6,7 +6,7 @@
         <!--<title>Swagger UI assets</title>-->
         <css src='Magento_Swagger::swagger-ui/css/style.css' media='screen' rel='stylesheet' type='text/css'/>
         <css src='Magento_Swagger::swagger-ui/css/swagger-ui.css' media='screen' rel='stylesheet' type='text/css'/>
-        <css src='Enhanced_Api::css/style.css' media='screen' rel='stylesheet' type='text/css'/>
+        <css src='Ph2m_EnhancedApi::css/style.css' media='screen' rel='stylesheet' type='text/css'/>
         <link src='Magento_Swagger::swagger-ui/js/lang/translator.js' type='text/javascript' defer="defer"/>
         <link src='Magento_Swagger::swagger-ui/js/lang/ru.js' type='text/javascript' defer="defer"/>
         <link src='Magento_Swagger::swagger-ui/js/lang/en.js' type='text/javascript' defer="defer"/>
@@ -26,7 +26,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="root">
-            <block name="swaggerUiContent" class="Magento\Swagger\Block\Index" template="Enhanced_Api::swagger-ui/login.phtml">
+            <block name="swaggerUiContent" class="Magento\Swagger\Block\Index" template="Ph2m_EnhancedApi::swagger-ui/login.phtml">
                 <block class="Magento\Framework\View\Element\Messages" name="messages" as="messages" template="Magento_Theme::messages.phtml"/>
             </block>
         </referenceContainer>

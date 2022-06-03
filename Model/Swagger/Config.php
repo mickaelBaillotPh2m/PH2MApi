@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Enhanced\Api\Model\Swagger;
+namespace Ph2m\EnhancedApi\Model\Swagger;
 
 use Magento\Framework\App\State;
 use Magento\Framework\App\Config\ScopeConfigInterface;

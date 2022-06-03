@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Enhanced\Api\Model\Swagger;
+namespace Ph2m\EnhancedApi\Model\Swagger;
 
 use Magento\Framework\App\State;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -34,8 +34,8 @@ class IsAllowed extends \Magento\Swagger\Model\Config
     public function isAllowedToAccessSwagger(): ?bool
     {
         if ($this->scopeConfig->getValue('webapi/swagger/swagger_login')
-           && $this->scopeConfig->getValue('webapi/swagger/swagger_password')) {
-           return $this->customerSession->getSwaggerAuthorized();
+            && $this->scopeConfig->getValue('webapi/swagger/swagger_password')) {
+            return $this->customerSession->getSwaggerAuthorized();
         }
 
         return true;
@@ -50,4 +50,5 @@ class IsAllowed extends \Magento\Swagger\Model\Config
 
         return false;
     }
+
 }
